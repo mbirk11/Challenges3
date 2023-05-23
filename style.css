@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+--violet: hsl(263, 55%, 52%);
+--grayish0-blue: hsl(217, 19%, 35%);
+--blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+--gray: hsl(0, 0%, 81%);
+--grayish-blue: hsl(210, 46%, 95%);
+font-size: 13px;
+}
+body{
+    background-color: var(--grayish-blue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Barlow Semi Condensed;
+    font-size: 1rem;
+   
+}
+main{
+    display:grid;
+    grid-template: "card1 card1 card2 card3"
+                   "card4 card5 card5 card3";
+                    
+    width: 1100px; 
+    gap: 25px;             
+}  
+.card{
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--gray);
+}     
+h6{
+    color: var(--gray); 
+}  
+h4{
+    color: var(--grayish-blue);
+}  
+.card3 h4,.card4 h4{
+    color: var(--grayish0-blue);
+}   
+img{
+    display: block;
+    width: 56px;
+    border-radius: 60px;
+}  
+.card3 p,.card4 p{
+    color: var(--grayish0-blue);
+}
+p{
+    color: var(--gray);
+}        
+.card1{
+    grid-area: card1;
+    background-color: var(--violet);
+    color: var(--White);
+    position: relative;
+}
+
+.card2{
+    grid-area: card2;
+    background-color: var(--grayish0-blue);
+    color: var(--White);
+}
+.card3{
+    grid-area: card3;
+    background-color: var(--White);
+    color: var(--blackish-blue);
+}
+.card4{
+    grid-area: card4;
+    background-color: var(--White);
+    color: var(--blackish-blue);
+}
+.card5{
+    grid-area: card5;
+    background-color: var(--blackish-blue);
+    color: var(--White);
+}
+.people-names{
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+
+}
+.people{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.bg-img img{
+    width: 100%
+}
+.bg-img{
+    position: absolute;
+    top: 0;
+    right:20%;
+    opacity: 30%;
+}
+@media(max-width:750px) {
+    main{
+        display: grid;
+        max-width: 300px;
+        height:100%;
+        grid-template-areas: 
+        'card1'
+        'card2'
+        'card3'
+        'card4'
+        'card5';
+    }
+ body{
+    height: 100%;
+ }
+}
